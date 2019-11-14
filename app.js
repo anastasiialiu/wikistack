@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 })
 
 const init = async () => {
-  await models.db.sync({force: true});
+  await models.db.sync({force: false});
 
   const PORT = 3000;
   app.listen(PORT, () => {
@@ -36,3 +36,4 @@ const init = async () => {
 }
 
 init();
+
